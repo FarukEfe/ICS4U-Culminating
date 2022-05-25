@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
-		92BB5A13283E6EB5002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A12283E6EB5002A7C2A /* Node.swift */; };
+		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,8 @@
 /* Begin PBXFileReference section */
 		92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		92BB5A11283E6DCB002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = input.txt; path = ../../../../input.txt; sourceTree = "<group>"; };
-		92BB5A12283E6EB5002A7C2A /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Node.swift; path = ../../../../Node.swift; sourceTree = "<group>"; };
+		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
+		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 		92BB5A0F283E6D90002A7C2A /* Graph */ = {
 			isa = PBXGroup;
 			children = (
-				92BB5A11283E6DCB002A7C2A /* input.txt */,
+				92BB5A14283E772A002A7C2A /* input.txt */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 		92BB5A10283E6D98002A7C2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92BB5A12283E6EB5002A7C2A /* Node.swift */,
+				92BB5A15283E7730002A7C2A /* Node.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BB5A09283E6AF0002A7C2A /* main.swift in Sources */,
-				92BB5A13283E6EB5002A7C2A /* Node.swift in Sources */,
+				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
