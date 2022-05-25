@@ -28,6 +28,7 @@
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		92BB5A17283ED5D9002A7C2A /* input.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = input.svg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A14283E772A002A7C2A /* input.txt */,
+				92BB5A17283ED5D9002A7C2A /* input.svg */,
 			);
 			path = Graph;
 			sourceTree = "<group>";
