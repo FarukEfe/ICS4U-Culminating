@@ -15,8 +15,6 @@ struct Node: Identifiable, Decodable {
     let edges: [Int]
 }
 
-// AS YOU PUT IN THE PARAGRAPHS CAN YOU CHECK TO SEE IF I GOT THE EDGES RIGHT?
-// IK INDEX 0 WON'T BE WHAT WE USE FOR THE END BUT FOR NOW IT'S GOOD
 let nodes = [
     Node(id: 1, description: nil, paragraphs: ["You are a mountain climber. Three years ago you spent the summer at a climbing school in the mountains of Colorado. Your instructors said that you had natural skills as a climber. You made rapid progress, and by the end of the summer you were leading difficult rock and ice climbs.", "That summer, you became close friends with a boy named Carlos. The two of you made a good climbing team. Last year you and he were chosen to join an international team. The expedition made it to the top of two unclimbed peaks in South America.", "One night on that expedition, the group was seated around the cook tent at the base camp. The expedition leader, Franz, told stories of climbing in the Himalayas, the highest mountains in the world."], image: nil, edges: [2]),
     Node(id: 2, description: nil, paragraphs: [""], image: "IMAGE GOES HERE", edges: [3]),
