@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
+		4912EC592840597100B823B6 /* nodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4912EC512840532900B823B6 /* nodes.json */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4912EC512840532900B823B6 /* nodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nodes.json; sourceTree = "<group>"; };
+		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
 		92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -42,6 +46,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4912EC58284056B100B823B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4912EC562840565D00B823B6 /* NodesList.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
 		92BB59FC283E6AF0002A7C2A = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A10283E6D98002A7C2A /* Model */,
+				4912EC58284056B100B823B6 /* ViewModel */,
 				92BB5A0F283E6D90002A7C2A /* Graph */,
 				92BB5A08283E6AF0002A7C2A /* main.swift */,
 			);
@@ -80,6 +93,7 @@
 		92BB5A10283E6D98002A7C2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4912EC512840532900B823B6 /* nodes.json */,
 				92BB5A15283E7730002A7C2A /* Node.swift */,
 			);
 			path = Model;
@@ -95,6 +109,7 @@
 				92BB5A01283E6AF0002A7C2A /* Sources */,
 				92BB5A02283E6AF0002A7C2A /* Frameworks */,
 				92BB5A03283E6AF0002A7C2A /* CopyFiles */,
+				4912EC4E28404FB600B823B6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -138,6 +153,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		4912EC4E28404FB600B823B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4912EC592840597100B823B6 /* nodes.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92BB5A01283E6AF0002A7C2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -145,6 +171,7 @@
 			files = (
 				92BB5A09283E6AF0002A7C2A /* main.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
+				4912EC572840565D00B823B6 /* NodesList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +228,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -255,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -268,8 +295,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -279,8 +307,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
