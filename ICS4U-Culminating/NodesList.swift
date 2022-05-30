@@ -9,11 +9,11 @@ import Foundation
 
 class NodesList {
     
-    var nodes: [Node]
+    var gameNodes: [Node]
     
     init() {
         guard let url = Bundle.main.url(forResource: "nodes", withExtension: "json") else {
-            self.nodes = []
+            self.gameNodes = nodes
             print("nodes.json file could not be found in bundle sources.")
             return
         }
@@ -25,10 +25,21 @@ class NodesList {
             print("Got data from file, contents are:")
             print(String(data: data, encoding: .utf8)!)
             
-            self.nodes = try JSONDecoder().decode([Node].self, from: data)
+            self.gameNodes = try JSONDecoder().decode([Node].self, from: data)
 
         } catch {
-            self.nodes = []
+            self.gameNodes = nodes
         }
+    }
+    
+    
+    func findNode(with ID: Int, from nodes: [Node]) -> Node? {
+        for node in nodes {
+            if node.id == ID {
+                return node
+            }
+        }
+        
+        return nil
     }
 }

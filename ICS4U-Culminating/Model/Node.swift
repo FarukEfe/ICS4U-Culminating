@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Node: Identifiable {
+struct Node: Identifiable, Decodable {
     let id: Int
     let paragraphs: [String]
     let image: String?
@@ -15,7 +15,7 @@ struct Node: Identifiable {
     let ending: Bool
 }
 
-struct Edge {
+struct Edge: Decodable {
     let destinationId: Int
     let prompt: String?
 }
