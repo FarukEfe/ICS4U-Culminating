@@ -9,3 +9,6 @@ import Foundation
 
 print("Hello, World!")
 
+var myNodeList = NodesList()
+
+print(myNodeList.nodes)
