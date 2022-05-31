@@ -89,7 +89,7 @@ func gameOnCycle() {
                 print("\n")
                 if node!.edges.count > 1 {
                     for edge in node!.edges {
-                        print("\(edge.destinationId) - \(edge.prompt!)")
+                        print("\(edge.destinationId) - \(edge.prompt)")
                     }
                 } else {
                     print("\nPress Enter to Advance to the Next Page\n")

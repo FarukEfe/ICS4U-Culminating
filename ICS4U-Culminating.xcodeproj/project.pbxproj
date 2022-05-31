@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
-		4912EC592840597100B823B6 /* nodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 4912EC512840532900B823B6 /* nodes.json */; };
 		497FCF3B28456B68007D8FBA /* EndingIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3A28456B68007D8FBA /* EndingIDs.swift */; };
-		497FCF3D28459501007D8FBA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3C28459501007D8FBA /* JSONParser.swift */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
@@ -37,10 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4912EC512840532900B823B6 /* nodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = nodes.json; sourceTree = "<group>"; };
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
 		497FCF3A28456B68007D8FBA /* EndingIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingIDs.swift; sourceTree = "<group>"; };
-		497FCF3C28459501007D8FBA /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -77,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				4912EC562840565D00B823B6 /* NodesList.swift */,
-				497FCF3C28459501007D8FBA /* JSONParser.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -123,7 +118,6 @@
 		92BB5A10283E6D98002A7C2A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4912EC512840532900B823B6 /* nodes.json */,
 				92BB5A15283E7730002A7C2A /* Node.swift */,
 				92D9DCDF284691E900EBAEC1 /* Edge.swift */,
 				497FCF3A28456B68007D8FBA /* EndingIDs.swift */,
@@ -239,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4912EC592840597100B823B6 /* nodes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +253,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BB5A09283E6AF0002A7C2A /* main.swift in Sources */,
-				497FCF3D28459501007D8FBA /* JSONParser.swift in Sources */,
 				92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
 				4912EC572840565D00B823B6 /* NodesList.swift in Sources */,

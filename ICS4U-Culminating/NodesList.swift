@@ -9,18 +9,11 @@ import Foundation
 
 class NodesList {
     
-    // JSON parser class that turns static data into Node
-    var jsonParser = JSONParser()
-    
     // Where default game nodes are stored
     var gameNodes: [Int : Node]
-    
-    // Where previous ending ID's are going to be stored
-    var previousEndings: [Int]
-    
+        
     init() {
-        self.gameNodes = jsonParser.fetchGameNodes(defaultNodes: storyNodes)
-        self.previousEndings = jsonParser.fetchEndings()
+        self.gameNodes = storyNodes
     }
     
     func findNode(with ID: Int) -> Node? {
