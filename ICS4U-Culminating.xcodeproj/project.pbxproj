@@ -13,6 +13,7 @@
 		497FCF3D28459501007D8FBA /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3C28459501007D8FBA /* JSONParser.swift */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
+		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		92BB5A17283ED5D9002A7C2A /* graph.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = graph.svg; sourceTree = "<group>"; };
+		92D9DCDF284691E900EBAEC1 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				4912EC512840532900B823B6 /* nodes.json */,
 				92BB5A15283E7730002A7C2A /* Node.swift */,
+				92D9DCDF284691E900EBAEC1 /* Edge.swift */,
 				497FCF3A28456B68007D8FBA /* EndingIDs.swift */,
 			);
 			path = Model;
@@ -177,6 +180,7 @@
 			files = (
 				92BB5A09283E6AF0002A7C2A /* main.swift in Sources */,
 				497FCF3D28459501007D8FBA /* JSONParser.swift in Sources */,
+				92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
 				4912EC572840565D00B823B6 /* NodesList.swift in Sources */,
 				497FCF3B28456B68007D8FBA /* EndingIDs.swift in Sources */,
@@ -303,7 +307,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,7 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
