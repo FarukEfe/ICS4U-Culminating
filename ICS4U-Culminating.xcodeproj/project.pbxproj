@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
 		497FCF3A28456B68007D8FBA /* EndingIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingIDs.swift; sourceTree = "<group>"; };
-		92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "ICS4U-Culminating"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92BB5A05283E6AF0002A7C2A /* CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
 		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		92BB5A06283E6AF0002A7C2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */,
+				92BB5A05283E6AF0002A7C2A /* CLI */,
 				92D9DCF72846980700EBAEC1 /* CulminatingApp.app */,
 			);
 			name = Products;
@@ -157,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		92BB5A04283E6AF0002A7C2A /* ICS4U-Culminating */ = {
+		92BB5A04283E6AF0002A7C2A /* CLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92BB5A0C283E6AF0002A7C2A /* Build configuration list for PBXNativeTarget "ICS4U-Culminating" */;
+			buildConfigurationList = 92BB5A0C283E6AF0002A7C2A /* Build configuration list for PBXNativeTarget "CLI" */;
 			buildPhases = (
 				92BB5A01283E6AF0002A7C2A /* Sources */,
 				92BB5A02283E6AF0002A7C2A /* Frameworks */,
@@ -170,14 +170,14 @@
 			);
 			dependencies = (
 			);
-			name = "ICS4U-Culminating";
+			name = CLI;
 			productName = "ICS4U-Culminating";
-			productReference = 92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */;
+			productReference = 92BB5A05283E6AF0002A7C2A /* CLI */;
 			productType = "com.apple.product-type.tool";
 		};
-		92D9DCF62846980700EBAEC1 /* iOS-Culminating */ = {
+		92D9DCF62846980700EBAEC1 /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS-Culminating" */;
+			buildConfigurationList = 92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				92D9DCF32846980700EBAEC1 /* Sources */,
 				92D9DCF42846980700EBAEC1 /* Frameworks */,
@@ -187,7 +187,7 @@
 			);
 			dependencies = (
 			);
-			name = "iOS-Culminating";
+			name = iOS;
 			productName = "iOS-Culminating";
 			productReference = 92D9DCF72846980700EBAEC1 /* CulminatingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -223,8 +223,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				92BB5A04283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCF62846980700EBAEC1 /* iOS-Culminating */,
+				92BB5A04283E6AF0002A7C2A /* CLI */,
+				92D9DCF62846980700EBAEC1 /* iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -489,7 +489,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92BB5A0C283E6AF0002A7C2A /* Build configuration list for PBXNativeTarget "ICS4U-Culminating" */ = {
+		92BB5A0C283E6AF0002A7C2A /* Build configuration list for PBXNativeTarget "CLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92BB5A0D283E6AF0002A7C2A /* Debug */,
@@ -498,7 +498,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS-Culminating" */ = {
+		92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				92D9DD032846980800EBAEC1 /* Debug */,

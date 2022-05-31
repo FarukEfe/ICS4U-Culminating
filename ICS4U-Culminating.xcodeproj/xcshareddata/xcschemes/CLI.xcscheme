@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "92D9DCF62846980700EBAEC1"
-               BuildableName = "CulminatingApp.app"
-               BlueprintName = "iOS"
+               BlueprintIdentifier = "92BB5A04283E6AF0002A7C2A"
+               BuildableName = "CLI"
+               BlueprintName = "CLI"
                ReferencedContainer = "container:ICS4U-Culminating.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -44,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92D9DCF62846980700EBAEC1"
-            BuildableName = "CulminatingApp.app"
-            BlueprintName = "iOS"
+            BlueprintIdentifier = "92BB5A04283E6AF0002A7C2A"
+            BuildableName = "CLI"
+            BlueprintName = "CLI"
             ReferencedContainer = "container:ICS4U-Culminating.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -61,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "92D9DCF62846980700EBAEC1"
-            BuildableName = "CulminatingApp.app"
-            BlueprintName = "iOS"
+            BlueprintIdentifier = "92BB5A04283E6AF0002A7C2A"
+            BuildableName = "CLI"
+            BlueprintName = "CLI"
             ReferencedContainer = "container:ICS4U-Culminating.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
