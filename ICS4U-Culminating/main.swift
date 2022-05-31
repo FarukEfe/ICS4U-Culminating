@@ -13,6 +13,7 @@ var myNodeList = NodesList()
 // MARK: Game Cycle Properties
 var node: Node? = nil
 var previousNodes: [Node] = []
+var previousEndings: [Node] = []
 var screenMode: String = "MAIN MENU"
 
 // MARK: Command Line App Cycles
@@ -55,6 +56,7 @@ func gameOnCycle() {
         var shouldReappear = true
         // If it is the end, then provide 3 options
         if node!.ending {
+            previousEndings.append(node!)
             while shouldReappear {
                 shouldReappear = false
                 print("\nTHE END\n\n0 - Quit\n1 - Main Menu\n2 - Review Choices\n3 - Start Again\n")
@@ -123,7 +125,41 @@ func gameOnCycle() {
 
 // Game History
 func gameHistoryCycle() {
-    
+    print("\n")
+    while screenMode == "GAME HISTORY" {
+        // Create a dictionary that links every ending node to a unique and brief description
+        for ending in previousEndings {
+            print(ending.id)
+        }
+        
+        print("\nThere remains still \(31-previousEndings.count) endings to be discovered.\n")
+        print("0 for main menu or type in the index number of the ending you want to revisit: ")
+        
+        let userResponse = readLine()?.replacingOccurrences(of: " ", with: "")
+        
+        if userResponse == "0" {
+            screenMode = "MAIN MENU"
+        } else if let nodeID = Int(userResponse!) {
+            var nodeFound = false
+            for ending in previousEndings where ending.id == nodeID {
+                nodeFound = true
+                for paragraph in ending.paragraphs {
+                    print(paragraph)
+                    print("\nPress Enter to Continue\n")
+                    let _ = readLine()
+                }
+                break
+            }
+            
+            if !nodeFound {
+                print("\nUnable to find the node with the ID value of \(nodeID), please try a different value.\n")
+            }
+            
+        } else {
+            print("\nPlease enter a valid input.\n")
+        }
+        
+    }
 }
 
 // Settings
@@ -139,8 +175,7 @@ while true {
         case "GAME ON":
             gameOnCycle()
         case "GAME HISTORY":
-            //gameHistoryCycle()
-            exit(0)
+            gameHistoryCycle()
         case "SETTINGS":
             //settingsCycle()
             exit(0)

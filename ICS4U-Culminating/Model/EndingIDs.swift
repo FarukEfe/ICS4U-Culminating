@@ -7,6 +7,6 @@
 
 import Foundation
 
-var goodEndingIDs: [Int] = [60, 47, 64, 102]
-var badEndingIDs: [Int] = [32, 54, 28, 29, 33, 42]
-var ambiguousEndingIDs: [Int] = [59, 37, 63]
+var goodEndingIDs: [Int] = [60, 47, 64, 102, 103, 104, 59, 80, 85, 99]
+var badEndingIDs: [Int] = [54, 28, 29, 33, 42, 204, 32, 54, 88, 96]
+var ambiguousEndingIDs: [Int] = [37, 63, 107, 111, 114, 116, 64, 72, 73, 87, 89]
