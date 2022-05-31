@@ -1,6 +1,6 @@
 //
 //  NodeView.swift
-//  iOS-Culminating
+//  CulminatingApp
 //
 //  Created by Vincent Cloutier on 2022-05-31.
 //

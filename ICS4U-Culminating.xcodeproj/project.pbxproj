@@ -12,7 +12,7 @@
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
-		92D9DCFA2846980700EBAEC1 /* iOS_CulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */; };
+		92D9DCFA2846980700EBAEC1 /* CulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCF92846980700EBAEC1 /* CulminatingApp.swift */; };
 		92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCFB2846980700EBAEC1 /* ContentView.swift */; };
 		92D9DCFE2846980800EBAEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DCFD2846980800EBAEC1 /* Assets.xcassets */; };
 		92D9DD012846980800EBAEC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */; };
@@ -43,8 +43,8 @@
 		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		92BB5A17283ED5D9002A7C2A /* graph.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = graph.svg; sourceTree = "<group>"; };
 		92D9DCDF284691E900EBAEC1 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
-		92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Culminating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CulminatingApp.swift; sourceTree = "<group>"; };
+		92D9DCF72846980700EBAEC1 /* CulminatingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CulminatingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D9DCF92846980700EBAEC1 /* CulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulminatingApp.swift; sourceTree = "<group>"; };
 		92D9DCFB2846980700EBAEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92D9DCFD2846980800EBAEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -75,13 +75,17 @@
 				4912EC562840565D00B823B6 /* NodesList.swift */,
 			);
 			name = ViewModel;
+			path = CLI;
 			sourceTree = "<group>";
 		};
 		92BB59FC283E6AF0002A7C2A = {
 			isa = PBXGroup;
 			children = (
-				92BB5A07283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCF82846980700EBAEC1 /* iOS-Culminating */,
+				92BB5A10283E6D98002A7C2A /* Model */,
+				4912EC58284056B100B823B6 /* ViewModel */,
+				92BB5A07283E6AF0002A7C2A /* CLI */,
+				92D9DCF82846980700EBAEC1 /* iOS */,
+				92BB5A0F283E6D90002A7C2A /* Graph */,
 				92BB5A06283E6AF0002A7C2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,20 +94,17 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */,
+				92D9DCF72846980700EBAEC1 /* CulminatingApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		92BB5A07283E6AF0002A7C2A /* ICS4U-Culminating */ = {
+		92BB5A07283E6AF0002A7C2A /* CLI */ = {
 			isa = PBXGroup;
 			children = (
-				92BB5A10283E6D98002A7C2A /* Model */,
-				4912EC58284056B100B823B6 /* ViewModel */,
-				92BB5A0F283E6D90002A7C2A /* Graph */,
 				92BB5A08283E6AF0002A7C2A /* main.swift */,
 			);
-			path = "ICS4U-Culminating";
+			path = CLI;
 			sourceTree = "<group>";
 		};
 		92BB5A0F283E6D90002A7C2A /* Graph */ = {
@@ -125,15 +126,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		92D9DCF82846980700EBAEC1 /* iOS-Culminating */ = {
+		92D9DCF82846980700EBAEC1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				92D9DCF92846980700EBAEC1 /* CulminatingApp.swift */,
 				92D9DD0D28469A1800EBAEC1 /* Views */,
-				92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */,
 				92D9DCFF2846980800EBAEC1 /* Preview Content */,
 				92D9DCFD2846980800EBAEC1 /* Assets.xcassets */,
 			);
-			path = "iOS-Culminating";
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		92D9DCFF2846980800EBAEC1 /* Preview Content */ = {
@@ -188,7 +189,7 @@
 			);
 			name = "iOS-Culminating";
 			productName = "iOS-Culminating";
-			productReference = 92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */;
+			productReference = 92D9DCF72846980700EBAEC1 /* CulminatingApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -269,7 +270,7 @@
 				92D9DD0C28469A1000EBAEC1 /* NodeView.swift in Sources */,
 				92D9DD082846997700EBAEC1 /* EndingIDs.swift in Sources */,
 				92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */,
-				92D9DCFA2846980700EBAEC1 /* iOS_CulminatingApp.swift in Sources */,
+				92D9DCFA2846980700EBAEC1 /* CulminatingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +394,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,7 +406,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,7 +421,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS-Culminating/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -435,8 +436,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vincentcloutier.iOS-Culminating";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincentcloutier.CulminatingApp;
+				PRODUCT_NAME = CulminatingApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -451,7 +452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iOS-Culminating/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -466,8 +467,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vincentcloutier.iOS-Culminating";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincentcloutier.CulminatingApp;
+				PRODUCT_NAME = CulminatingApp;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
