@@ -18,6 +18,10 @@
 		92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCFB2846980700EBAEC1 /* ContentView.swift */; };
 		92D9DCFE2846980800EBAEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DCFD2846980800EBAEC1 /* Assets.xcassets */; };
 		92D9DD012846980800EBAEC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */; };
+		92D9DD062846997700EBAEC1 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
+		92D9DD072846997700EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
+		92D9DD082846997700EBAEC1 /* EndingIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3A28456B68007D8FBA /* EndingIDs.swift */; };
+		92D9DD0C28469A1000EBAEC1 /* NodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DD0B28469A1000EBAEC1 /* NodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -48,6 +52,7 @@
 		92D9DCFB2846980700EBAEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		92D9DCFD2846980800EBAEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92D9DD0B28469A1000EBAEC1 /* NodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,10 +134,10 @@
 		92D9DCF82846980700EBAEC1 /* iOS-Culminating */ = {
 			isa = PBXGroup;
 			children = (
+				92D9DD0D28469A1800EBAEC1 /* Views */,
 				92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */,
-				92D9DCFB2846980700EBAEC1 /* ContentView.swift */,
-				92D9DCFD2846980800EBAEC1 /* Assets.xcassets */,
 				92D9DCFF2846980800EBAEC1 /* Preview Content */,
+				92D9DCFD2846980800EBAEC1 /* Assets.xcassets */,
 			);
 			path = "iOS-Culminating";
 			sourceTree = "<group>";
@@ -143,6 +148,15 @@
 				92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92D9DD0D28469A1800EBAEC1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				92D9DCFB2846980700EBAEC1 /* ContentView.swift */,
+				92D9DD0B28469A1000EBAEC1 /* NodeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92D9DD062846997700EBAEC1 /* Node.swift in Sources */,
+				92D9DD072846997700EBAEC1 /* Edge.swift in Sources */,
+				92D9DD0C28469A1000EBAEC1 /* NodeView.swift in Sources */,
+				92D9DD082846997700EBAEC1 /* EndingIDs.swift in Sources */,
 				92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */,
 				92D9DCFA2846980700EBAEC1 /* iOS_CulminatingApp.swift in Sources */,
 			);

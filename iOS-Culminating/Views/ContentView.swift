@@ -16,6 +16,11 @@ struct ContentView: View {
     var gameIsON: Bool {
         return activeNode > 0
     }
+    
+    var currentNode: Node {
+        return storyNodes[activeNode] ?? emptyNode
+    }
+    
     var body: some View {
         if gameIsON == false {
             Text("Welcome!")
@@ -23,7 +28,7 @@ struct ContentView: View {
                     startGame()
                 }
         } else {
-            Text("The game is afoot")
+            NodeView(node: currentNode)
         }
     }
     
