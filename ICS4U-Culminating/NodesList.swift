@@ -9,29 +9,19 @@ import Foundation
 
 class NodesList {
     
+    // JSON parser class that turns static data into Node
+    var jsonParser = JSONParser()
+    
+    // Where default game nodes are stored
     var gameNodes: [Node]
     
-    init() {
-        guard let url = Bundle.main.url(forResource: "nodes", withExtension: "json") else {
-            self.gameNodes = nodes
-            print("nodes.json file could not be found in bundle sources.")
-            return
-        }
-        
-        do {
-            // Load the raw data
-            let data = try Data(contentsOf: url)
-            
-            print("Got data from file, contents are:")
-            print(String(data: data, encoding: .utf8)!)
-            
-            self.gameNodes = try JSONDecoder().decode([Node].self, from: data)
-
-        } catch {
-            self.gameNodes = nodes
-        }
-    }
+    // Where previous ending ID's are going to be stored
+    var previousEndings: [Int]
     
+    init() {
+        self.gameNodes = jsonParser.fetchGameNodes(defaultNodes: nodes)
+        self.previousEndings = jsonParser.fetchEndings()
+    }
     
     func findNode(with ID: Int, from nodes: [Node]) -> Node? {
         for node in nodes {

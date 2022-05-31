@@ -18,7 +18,7 @@ var screenMode: String = "MAIN MENU"
 // MARK: Command Line App Cycles
 // Main Screen
 func mainScreenCycle() {
-    print("0 - Quit\n1 - Start\n2 - Game History\n3 - Settings\n")
+    print("\nMAIN MENU\n\n0 - Quit\n1 - Start\n2 - Game History\n3 - Settings\n")
     let mainInput = readLine()
     
     if mainInput == "0" {
@@ -43,8 +43,12 @@ func gameOnCycle() {
     
     while screenMode == "GAME ON" {
         // Display node paragraphs
-        for paragraph in node!.paragraphs {
-            print("\n\(paragraph)")
+        for p in 0...node!.paragraphs.count - 1 {
+            print("\n\(node!.paragraphs[p])")
+            if p != node!.paragraphs.count - 1 {
+                print("\nPress Enter to Continue")
+                let _ = readLine()
+            }
         }
 
         // Evaluating User Destination Input
@@ -52,23 +56,29 @@ func gameOnCycle() {
         // If it is the end, then provide 3 options
         if node!.ending {
             while shouldReappear {
-                print("\nTHE END\n\n0 - Quit\n1 - Main Menu\n2 - Start Again\n")
+                shouldReappear = false
+                print("\nTHE END\n\n0 - Quit\n1 - Main Menu\n2 - Review Choices\n3 - Start Again\n")
                 let userResponse = readLine()
                 
                 switch userResponse {
                     case "0":
                         exit(0)
                     case "1":
-                        shouldReappear = false
                         screenMode = "MAIN MENU"
                         node = nil
                         previousNodes = []
                     case "2":
-                        shouldReappear = false
+                        shouldReappear = true
+                        // You're going to show users a history of their choices here
+                        for previous in previousNodes {
+                            print("--> \(previous.id)")
+                        }
+                    case "3":
                         node = myNodeList.findNode(with: 1, from: myNodeList.gameNodes)
                         previousNodes = []
                         previousNodes.append(node!)
                     default:
+                        shouldReappear = true
                         print("\nPlease provide a valid answer")
                 }
             }
@@ -80,21 +90,17 @@ func gameOnCycle() {
                         print("\(edge.destinationId) - \(edge.prompt!)")
                     }
                 } else {
-                    print("\nType \"1\" to continue\n")
+                    print("\nPress Enter to Advance to the Next Page\n")
                 }
                 
                 let userResponse = readLine()?.replacingOccurrences(of: " ", with: "")
                 
-                if let userPath = Int(userResponse!) {
-                    if node!.edges.count == 1 {
-                        if userPath == 1 {
-                            node = myNodeList.findNode(with: node!.edges[0].destinationId, from: myNodeList.gameNodes)
-                            shouldReappear = false
-                        }
-                    } else {
+                if node!.edges.count > 1 {
+                    if let userPath = Int(userResponse!) {
                         for edge in node!.edges {
                             if edge.destinationId == userPath {
                                 node = myNodeList.findNode(with: userPath, from: myNodeList.gameNodes)
+                                previousNodes.append(node!)
                                 shouldReappear = false
                                 break
                             }
@@ -106,7 +112,9 @@ func gameOnCycle() {
                     }
                     
                 } else {
-                    print("\nPlease provide a valid destination")
+                    node = myNodeList.findNode(with: node!.edges[0].destinationId, from: myNodeList.gameNodes)
+                    previousNodes.append(node!)
+                    shouldReappear = false
                 }
             }
         }
@@ -123,7 +131,7 @@ func settingsCycle() {
     
 }
 
-print("\nWelcome to the game!\n")
+print("\nWelcome to the game!")
 while true {
     switch screenMode {
         case "MAIN MENU":
