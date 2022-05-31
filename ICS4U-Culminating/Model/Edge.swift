@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Edge: Decodable {
+struct Edge: Decodable, Hashable {
     let destinationId: Int
-    let prompt: String?
+    let prompt: String
 }

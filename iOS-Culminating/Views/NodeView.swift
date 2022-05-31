@@ -8,12 +8,39 @@
 import SwiftUI
 
 struct NodeView: View {
-    
-    // MARK: Stored Properties
     let node: Node
-
-    // MARK: Computed Properties
+    @Binding var activeNode: Int
+    
+    var image: String {
+        return node.image ?? ""
+    }
+    
     var body: some View {
-        Text(node.paragraphs[0])
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text("\(node.id)")
+                    .padding()
+                ForEach(node.paragraphs, id: \.self) { currentParagraph in
+                    Text(currentParagraph)
+                        .padding()
+                }
+                
+                Image(image)
+                    .resizable()
+                    .scaledToFit()
+                
+                ForEach(node.edges, id: \.self) { currentEdge in
+                    HStack {
+                        Spacer()
+                        Text(currentEdge.prompt)
+                            .padding()
+                            .multilineTextAlignment(.trailing)
+                            .onTapGesture {
+                                activeNode = currentEdge.destinationId
+                            }
+                    }
+                }
+            }
+        }
     }
 }

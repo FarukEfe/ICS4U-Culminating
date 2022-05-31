@@ -8,19 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    // MARK: Stored Properties
     @State var activeNode = 0
-    
-    // MARK: Computed Properties
     var gameIsON: Bool {
         return activeNode > 0
     }
-    
     var currentNode: Node {
         return storyNodes[activeNode] ?? emptyNode
     }
-    
     var body: some View {
         if gameIsON == false {
             Text("Welcome!")
@@ -28,11 +22,10 @@ struct ContentView: View {
                     startGame()
                 }
         } else {
-            NodeView(node: currentNode)
+            NodeView(node: currentNode, activeNode: $activeNode)
         }
     }
     
-    // MARK: Functions
     func startGame() {
         activeNode = 1
     }
