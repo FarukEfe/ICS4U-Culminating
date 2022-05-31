@@ -14,10 +14,10 @@
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
-		92D9DCE82846959B00EBAEC1 /* CulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCE72846959B00EBAEC1 /* CulminatingApp.swift */; };
-		92D9DCEA2846959B00EBAEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCE92846959B00EBAEC1 /* ContentView.swift */; };
-		92D9DCEC2846959D00EBAEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DCEB2846959D00EBAEC1 /* Assets.xcassets */; };
-		92D9DCEF2846959D00EBAEC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DCEE2846959D00EBAEC1 /* Preview Assets.xcassets */; };
+		92D9DCFA2846980700EBAEC1 /* iOS_CulminatingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */; };
+		92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCFB2846980700EBAEC1 /* ContentView.swift */; };
+		92D9DCFE2846980800EBAEC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DCFD2846980800EBAEC1 /* Assets.xcassets */; };
+		92D9DD012846980800EBAEC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,11 +43,11 @@
 		92BB5A15283E7730002A7C2A /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		92BB5A17283ED5D9002A7C2A /* graph.svg */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = graph.svg; sourceTree = "<group>"; };
 		92D9DCDF284691E900EBAEC1 /* Edge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edge.swift; sourceTree = "<group>"; };
-		92D9DCE52846959B00EBAEC1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		92D9DCE72846959B00EBAEC1 /* CulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CulminatingApp.swift; sourceTree = "<group>"; };
-		92D9DCE92846959B00EBAEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		92D9DCEB2846959D00EBAEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		92D9DCEE2846959D00EBAEC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Culminating.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CulminatingApp.swift; sourceTree = "<group>"; };
+		92D9DCFB2846980700EBAEC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		92D9DCFD2846980800EBAEC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +58,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92D9DCE22846959B00EBAEC1 /* Frameworks */ = {
+		92D9DCF42846980700EBAEC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -81,7 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A07283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCE62846959B00EBAEC1 /* iOS */,
+				92D9DCF82846980700EBAEC1 /* iOS-Culminating */,
 				92BB5A06283E6AF0002A7C2A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,7 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCE52846959B00EBAEC1 /* iOS.app */,
+				92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,21 +126,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		92D9DCE62846959B00EBAEC1 /* iOS */ = {
+		92D9DCF82846980700EBAEC1 /* iOS-Culminating */ = {
 			isa = PBXGroup;
 			children = (
-				92D9DCE72846959B00EBAEC1 /* CulminatingApp.swift */,
-				92D9DCE92846959B00EBAEC1 /* ContentView.swift */,
-				92D9DCEB2846959D00EBAEC1 /* Assets.xcassets */,
-				92D9DCED2846959D00EBAEC1 /* Preview Content */,
+				92D9DCF92846980700EBAEC1 /* iOS_CulminatingApp.swift */,
+				92D9DCFB2846980700EBAEC1 /* ContentView.swift */,
+				92D9DCFD2846980800EBAEC1 /* Assets.xcassets */,
+				92D9DCFF2846980800EBAEC1 /* Preview Content */,
 			);
-			path = iOS;
+			path = "iOS-Culminating";
 			sourceTree = "<group>";
 		};
-		92D9DCED2846959D00EBAEC1 /* Preview Content */ = {
+		92D9DCFF2846980800EBAEC1 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				92D9DCEE2846959D00EBAEC1 /* Preview Assets.xcassets */,
+				92D9DD002846980800EBAEC1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -166,21 +166,21 @@
 			productReference = 92BB5A05283E6AF0002A7C2A /* ICS4U-Culminating */;
 			productType = "com.apple.product-type.tool";
 		};
-		92D9DCE42846959B00EBAEC1 /* iOS */ = {
+		92D9DCF62846980700EBAEC1 /* iOS-Culminating */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 92D9DCF02846959D00EBAEC1 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = 92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS-Culminating" */;
 			buildPhases = (
-				92D9DCE12846959B00EBAEC1 /* Sources */,
-				92D9DCE22846959B00EBAEC1 /* Frameworks */,
-				92D9DCE32846959B00EBAEC1 /* Resources */,
+				92D9DCF32846980700EBAEC1 /* Sources */,
+				92D9DCF42846980700EBAEC1 /* Frameworks */,
+				92D9DCF52846980700EBAEC1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iOS;
-			productName = Culminating;
-			productReference = 92D9DCE52846959B00EBAEC1 /* iOS.app */;
+			name = "iOS-Culminating";
+			productName = "iOS-Culminating";
+			productReference = 92D9DCF72846980700EBAEC1 /* iOS-Culminating.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 					92BB5A04283E6AF0002A7C2A = {
 						CreatedOnToolsVersion = 13.4;
 					};
-					92D9DCE42846959B00EBAEC1 = {
+					92D9DCF62846980700EBAEC1 = {
 						CreatedOnToolsVersion = 13.4;
 					};
 				};
@@ -215,7 +215,7 @@
 			projectRoot = "";
 			targets = (
 				92BB5A04283E6AF0002A7C2A /* ICS4U-Culminating */,
-				92D9DCE42846959B00EBAEC1 /* iOS */,
+				92D9DCF62846980700EBAEC1 /* iOS-Culminating */,
 			);
 		};
 /* End PBXProject section */
@@ -229,12 +229,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92D9DCE32846959B00EBAEC1 /* Resources */ = {
+		92D9DCF52846980700EBAEC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D9DCEF2846959D00EBAEC1 /* Preview Assets.xcassets in Resources */,
-				92D9DCEC2846959D00EBAEC1 /* Assets.xcassets in Resources */,
+				92D9DD012846980800EBAEC1 /* Preview Assets.xcassets in Resources */,
+				92D9DCFE2846980800EBAEC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,12 +254,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92D9DCE12846959B00EBAEC1 /* Sources */ = {
+		92D9DCF32846980700EBAEC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92D9DCEA2846959B00EBAEC1 /* ContentView.swift in Sources */,
-				92D9DCE82846959B00EBAEC1 /* CulminatingApp.swift in Sources */,
+				92D9DCFC2846980700EBAEC1 /* ContentView.swift in Sources */,
+				92D9DCFA2846980700EBAEC1 /* iOS_CulminatingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,14 +403,14 @@
 			};
 			name = Release;
 		};
-		92D9DCF12846959D00EBAEC1 /* Debug */ = {
+		92D9DD032846980800EBAEC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Culminating/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Culminating/Preview Content\"";
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -425,7 +425,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vincentcloutier.Culminating;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vincentcloutier.iOS-Culminating";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -434,14 +434,14 @@
 			};
 			name = Debug;
 		};
-		92D9DCF22846959D00EBAEC1 /* Release */ = {
+		92D9DD042846980800EBAEC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Culminating/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iOS-Culminating/Preview Content\"";
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -456,7 +456,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vincentcloutier.Culminating;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vincentcloutier.iOS-Culminating";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -487,11 +487,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		92D9DCF02846959D00EBAEC1 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		92D9DD022846980800EBAEC1 /* Build configuration list for PBXNativeTarget "iOS-Culminating" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92D9DCF12846959D00EBAEC1 /* Debug */,
-				92D9DCF22846959D00EBAEC1 /* Release */,
+				92D9DD032846980800EBAEC1 /* Debug */,
+				92D9DD042846980800EBAEC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
