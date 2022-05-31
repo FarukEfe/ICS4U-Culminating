@@ -12,7 +12,7 @@ class JSONParser {
     // MARK: JSON Parsing Methods
     
     // Fetch Nodes
-    func fetchGameNodes(defaultNodes: [Node]) -> [Node] {
+    func fetchGameNodes(defaultNodes: [Int: Node]) -> [Int : Node] {
         guard let url = Bundle.main.url(forResource: "nodes", withExtension: "json") else {
             print("nodes.json file could not be found in bundle sources.")
             return defaultNodes
@@ -25,7 +25,7 @@ class JSONParser {
             print("Got data from file, contents are:")
             print(String(data: data, encoding: .utf8)!)
             
-            return try JSONDecoder().decode([Node].self, from: data)
+            return try JSONDecoder().decode([Int : Node].self, from: data)
 
         } catch {
             return defaultNodes
