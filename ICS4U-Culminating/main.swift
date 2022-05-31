@@ -132,7 +132,7 @@ func gameHistoryCycle() {
             print(ending.id)
         }
         
-        print("\nThere remains still \(28-previousEndings.count) endings to be discovered.\n")
+        print("\nThere remains still \(31-previousEndings.count) endings to be discovered.\n")
         print("0 for main menu or type in the index number of the ending you want to revisit: ")
         
         let userResponse = readLine()?.replacingOccurrences(of: " ", with: "")
