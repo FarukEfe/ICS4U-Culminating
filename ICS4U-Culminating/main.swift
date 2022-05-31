@@ -39,7 +39,7 @@ func mainScreenCycle() {
 
 // Game On
 func gameOnCycle() {
-    node = myNodeList.findNode(with: 1, from: myNodeList.gameNodes)
+    node = myNodeList.findNode(with: 1)
     previousNodes.append(node!)
     
     while screenMode == "GAME ON" {
@@ -76,7 +76,7 @@ func gameOnCycle() {
                             print("--> \(previous.id)")
                         }
                     case "3":
-                        node = myNodeList.findNode(with: 1, from: myNodeList.gameNodes)
+                        node = myNodeList.findNode(with: 1)
                         previousNodes = []
                         previousNodes.append(node!)
                     default:
@@ -101,7 +101,7 @@ func gameOnCycle() {
                     if let userPath = Int(userResponse!) {
                         for edge in node!.edges {
                             if edge.destinationId == userPath {
-                                node = myNodeList.findNode(with: userPath, from: myNodeList.gameNodes)
+                                node = myNodeList.findNode(with: userPath)
                                 previousNodes.append(node!)
                                 shouldReappear = false
                                 break
@@ -114,7 +114,7 @@ func gameOnCycle() {
                     }
                     
                 } else {
-                    node = myNodeList.findNode(with: node!.edges[0].destinationId, from: myNodeList.gameNodes)
+                    node = myNodeList.findNode(with: node!.edges[0].destinationId)
                     previousNodes.append(node!)
                     shouldReappear = false
                 }
