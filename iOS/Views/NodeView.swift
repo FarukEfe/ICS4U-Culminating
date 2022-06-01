@@ -43,6 +43,10 @@ struct NodeView: View {
                     }
                 }
             }
-        }
+        }.background(
+            Image("Beige")
+                .resizable()
+                .ignoresSafeArea()
+        )
     }
 }
