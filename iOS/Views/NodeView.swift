@@ -11,10 +11,6 @@ struct NodeView: View {
     let node: Node
     @Binding var activeNode: Int
     
-    var image: String {
-        return node.image ?? ""
-    }
-    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -27,11 +23,12 @@ struct NodeView: View {
                         .font(Font.custom("Sunset Light", size: 20))
                 }
                 
-                Image(image)
-                    .resizable()
-                    .scaledToFit()
-                    .padding()
-
+                if node.image != nil {
+                    Image(node.image!)
+                        .resizable()
+                        .scaledToFit()
+                        .padding()
+                }
                 
                 ForEach(node.edges, id: \.self) { currentEdge in
                     HStack {
