@@ -8,13 +8,32 @@
 import SwiftUI
 
 struct HistoryView: View {
+    @Environment(\.dismiss) var dismiss
+    var completedEndings: [Int]
+    var totalNumberOfEndings = goodEndingIDs.count + badEndingIDs.count + ambiguousEndingIDs.count
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        NavigationView {
+            ScrollView {
+                Text("You have \(totalNumberOfEndings - completedEndings.count) endings left.")
+                    .multilineTextAlignment(.leading)
+                    .font(.title2)
+                
+                Text("Completed Endings:")
+                    .multilineTextAlignment(.leading)
+                    .font(.title2)
 
-struct HistoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoryView()
+                ForEach(completedEndings, id: \.self) { currentEnding in
+                        Text("\(currentEnding)")
+                            .padding()
+                            .font(.title2)
+                }
+            }
+            .navigationTitle("History")
+            .toolbar {
+                Button("Close") {
+                    dismiss()
+                }
+            }
+        }
     }
 }
