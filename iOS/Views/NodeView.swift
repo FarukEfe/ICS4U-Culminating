@@ -11,6 +11,10 @@ struct NodeView: View {
     let node: Node
     @Binding var activeNode: Int
     
+    var nodeIsAnEnd: Bool {
+        return node.edges == []
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -42,6 +46,16 @@ struct NodeView: View {
                             }
                     }
                 }
+                
+            }
+            if nodeIsAnEnd == true {
+                Text("The End")
+                    .padding()
+                    .font(Font.custom("Sunset Bold", size: 25))
+                    .multilineTextAlignment(.center)
+                    .onTapGesture {
+                        activeNode = 0
+                    }
             }
         }.background(
             Image("Beige")
