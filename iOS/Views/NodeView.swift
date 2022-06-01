@@ -10,6 +10,7 @@ import SwiftUI
 struct NodeView: View {
     let node: Node
     @Binding var activeNode: Int
+    @Binding var completedEndNodes: [Int]
     
     var nodeIsAnEnd: Bool {
         return node.edges == []
@@ -54,6 +55,7 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
+                        completedEndNodes.append(activeNode)
                         activeNode = 0
                     }
             }

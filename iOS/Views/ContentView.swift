@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State var activeNode = 0
+    @State var completedEndNodes: [Int] = []
+    @State private var showingSheet = false
+    
     var gameIsON: Bool {
         return activeNode > 0
     }
@@ -18,25 +21,37 @@ struct ContentView: View {
     var body: some View {
         if gameIsON == false {
             VStack {
+                Spacer()
+                
                 Text("THE ABOMINABLE SNOWMAN")
                     .font(Font.custom("Benecarlo Book", size: 36))
                     .multilineTextAlignment(.center)
-                                
+                
                 Image("Cover")
                     .resizable()
                     .scaledToFit()
                     .padding()
-                                    
+                    .onTapGesture {
+                        startGame()
+                    }
+                
                 Text("BY R. A. MONTGOMERY")
                     .font(Font.custom("Benecarlo Medium", size: 24.0))
-            }
-            
-            .onTapGesture {
-                startGame()
+                
+                Spacer()
+                
+                Button("History") {
+                    showingSheet.toggle()
+                }
+                .buttonStyle(.bordered)
+                
             }
             .padding()
+            .sheet(isPresented: $showingSheet) {
+                HistoryView()
+            }
         } else {
-            NodeView(node: currentNode, activeNode: $activeNode)
+            NodeView(node: currentNode, activeNode: $activeNode, completedEndNodes: $completedEndNodes)
         }
     }
     

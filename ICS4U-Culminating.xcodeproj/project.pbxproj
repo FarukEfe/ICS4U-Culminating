@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
 		497FCF3B28456B68007D8FBA /* EndingIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3A28456B68007D8FBA /* EndingIDs.swift */; };
+		921697BA2847B4600025C02A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921697B92847B4600025C02A /* HistoryView.swift */; };
 		92742D942846E72400CEAC3A /* Sunset-DemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */; };
 		92742D952846E72400CEAC3A /* Sunset-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */; };
 		92742D962846E72400CEAC3A /* Sunset-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8E2846E72400CEAC3A /* Sunset-Bold.otf */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
 		497FCF3A28456B68007D8FBA /* EndingIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingIDs.swift; sourceTree = "<group>"; };
+		921697B92847B4600025C02A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-DemiItalic.otf"; sourceTree = "<group>"; };
 		92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-BoldItalic.otf"; sourceTree = "<group>"; };
 		92742D8E2846E72400CEAC3A /* Sunset-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-Bold.otf"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				92D9DCFB2846980700EBAEC1 /* ContentView.swift */,
 				92D9DD0B28469A1000EBAEC1 /* NodeView.swift */,
+				921697B92847B4600025C02A /* HistoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				921697BA2847B4600025C02A /* HistoryView.swift in Sources */,
 				92D9DD062846997700EBAEC1 /* Node.swift in Sources */,
 				92D9DD072846997700EBAEC1 /* Edge.swift in Sources */,
 				92D9DD0C28469A1000EBAEC1 /* NodeView.swift in Sources */,
