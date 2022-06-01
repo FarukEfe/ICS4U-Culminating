@@ -22,9 +22,9 @@ struct NodeView: View {
                     .padding()
                     .font(Font.custom("Sunset Medium", size: 36.0))
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
-                    Text(currentParagraph)
+                    Text("\t\(currentParagraph)")
                         .padding()
-                        .font(Font.custom("Benecarlo Medium", size: 20))
+                        .font(Font.custom("Sunset Light", size: 20))
                 }
                 
                 Image(image)
