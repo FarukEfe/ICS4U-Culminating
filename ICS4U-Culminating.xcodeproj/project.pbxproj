@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
 		497FCF3B28456B68007D8FBA /* EndingIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3A28456B68007D8FBA /* EndingIDs.swift */; };
+		92742D942846E72400CEAC3A /* Sunset-DemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */; };
+		92742D952846E72400CEAC3A /* Sunset-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */; };
+		92742D962846E72400CEAC3A /* Sunset-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8E2846E72400CEAC3A /* Sunset-Bold.otf */; };
+		92742D972846E72400CEAC3A /* Sunset-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8F2846E72400CEAC3A /* Sunset-MediumItalic.otf */; };
+		92742D982846E72400CEAC3A /* Sunset-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D902846E72400CEAC3A /* Sunset-LightItalic.otf */; };
+		92742D992846E72400CEAC3A /* Sunset-Demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D912846E72400CEAC3A /* Sunset-Demi.otf */; };
+		92742D9A2846E72400CEAC3A /* Sunset-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D922846E72400CEAC3A /* Sunset-Light.otf */; };
+		92742D9B2846E72400CEAC3A /* Sunset-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D932846E72400CEAC3A /* Sunset-Medium.otf */; };
+		92742D9E2846E72D00CEAC3A /* Benecarlo-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D9C2846E72D00CEAC3A /* Benecarlo-Book.otf */; };
+		92742D9F2846E72D00CEAC3A /* Benecarlo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
@@ -37,6 +47,17 @@
 /* Begin PBXFileReference section */
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
 		497FCF3A28456B68007D8FBA /* EndingIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingIDs.swift; sourceTree = "<group>"; };
+		92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-DemiItalic.otf"; sourceTree = "<group>"; };
+		92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-BoldItalic.otf"; sourceTree = "<group>"; };
+		92742D8E2846E72400CEAC3A /* Sunset-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-Bold.otf"; sourceTree = "<group>"; };
+		92742D8F2846E72400CEAC3A /* Sunset-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-MediumItalic.otf"; sourceTree = "<group>"; };
+		92742D902846E72400CEAC3A /* Sunset-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-LightItalic.otf"; sourceTree = "<group>"; };
+		92742D912846E72400CEAC3A /* Sunset-Demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-Demi.otf"; sourceTree = "<group>"; };
+		92742D922846E72400CEAC3A /* Sunset-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-Light.otf"; sourceTree = "<group>"; };
+		92742D932846E72400CEAC3A /* Sunset-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-Medium.otf"; sourceTree = "<group>"; };
+		92742D9C2846E72D00CEAC3A /* Benecarlo-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Benecarlo-Book.otf"; sourceTree = "<group>"; };
+		92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Benecarlo-Medium.otf"; sourceTree = "<group>"; };
+		92742DA02846E7AB00CEAC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92BB5A05283E6AF0002A7C2A /* CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -78,9 +99,27 @@
 			path = CLI;
 			sourceTree = "<group>";
 		};
+		92742D8B2846E6FF00CEAC3A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92742D9C2846E72D00CEAC3A /* Benecarlo-Book.otf */,
+				92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */,
+				92742D8E2846E72400CEAC3A /* Sunset-Bold.otf */,
+				92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */,
+				92742D912846E72400CEAC3A /* Sunset-Demi.otf */,
+				92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */,
+				92742D922846E72400CEAC3A /* Sunset-Light.otf */,
+				92742D902846E72400CEAC3A /* Sunset-LightItalic.otf */,
+				92742D932846E72400CEAC3A /* Sunset-Medium.otf */,
+				92742D8F2846E72400CEAC3A /* Sunset-MediumItalic.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		92BB59FC283E6AF0002A7C2A = {
 			isa = PBXGroup;
 			children = (
+				92742D8B2846E6FF00CEAC3A /* Fonts */,
 				92BB5A10283E6D98002A7C2A /* Model */,
 				4912EC58284056B100B823B6 /* ViewModel */,
 				92BB5A07283E6AF0002A7C2A /* CLI */,
@@ -129,6 +168,7 @@
 		92D9DCF82846980700EBAEC1 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				92742DA02846E7AB00CEAC3A /* Info.plist */,
 				92D9DCF92846980700EBAEC1 /* CulminatingApp.swift */,
 				92D9DD0D28469A1800EBAEC1 /* Views */,
 				92D9DCFF2846980800EBAEC1 /* Preview Content */,
@@ -243,6 +283,16 @@
 			files = (
 				92D9DD012846980800EBAEC1 /* Preview Assets.xcassets in Resources */,
 				92D9DCFE2846980800EBAEC1 /* Assets.xcassets in Resources */,
+				92742D972846E72400CEAC3A /* Sunset-MediumItalic.otf in Resources */,
+				92742D9A2846E72400CEAC3A /* Sunset-Light.otf in Resources */,
+				92742D9E2846E72D00CEAC3A /* Benecarlo-Book.otf in Resources */,
+				92742D962846E72400CEAC3A /* Sunset-Bold.otf in Resources */,
+				92742D992846E72400CEAC3A /* Sunset-Demi.otf in Resources */,
+				92742D9B2846E72400CEAC3A /* Sunset-Medium.otf in Resources */,
+				92742D9F2846E72D00CEAC3A /* Benecarlo-Medium.otf in Resources */,
+				92742D982846E72400CEAC3A /* Sunset-LightItalic.otf in Resources */,
+				92742D952846E72400CEAC3A /* Sunset-BoldItalic.otf in Resources */,
+				92742D942846E72400CEAC3A /* Sunset-DemiItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +475,7 @@
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,6 +507,7 @@
 				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Benecarlo-Book.otf</string>
+		<string>Benecarlo-Medium.otf</string>
+		<string>Sunset-Bold.otf</string>
+		<string>Sunset-BoldItalic.otf</string>
+		<string>Sunset-Demi.otf</string>
+		<string>Sunset-DemiItalic.otf</string>
+		<string>Sunset-Light.otf</string>
+		<string>Sunset-LightItalic.otf</string>
+		<string>Sunset-Medium.otf</string>
+		<string>Sunset-MediumItalic.otf</string>
+	</array>
+</dict>
+</plist>
