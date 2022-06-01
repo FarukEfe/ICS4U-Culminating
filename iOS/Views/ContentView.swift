@@ -17,10 +17,24 @@ struct ContentView: View {
     }
     var body: some View {
         if gameIsON == false {
-            Text("Welcome!")
-                .onTapGesture {
-                    startGame()
-                }
+            VStack {
+                Text("THE ABOMINABLE SNOWMAN")
+                    .font(Font.custom("Benecarlo Book", size: 36))
+                    .multilineTextAlignment(.center)
+                                
+                Image("Cover")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                                    
+                Text("BY R. A. MONTGOMERY")
+                    .font(Font.custom("Benecarlo Medium", size: 24.0))
+            }
+            
+            .onTapGesture {
+                startGame()
+            }
+            .padding()
         } else {
             NodeView(node: currentNode, activeNode: $activeNode)
         }
