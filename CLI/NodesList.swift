@@ -17,7 +17,7 @@ class NodesList: ObservableObject {
     
     init() {
         self.gameNodes = storyNodes
-        self.completedEndings = []
+        self.completedEndings = NodesList.loadEndings()
     }
     
     func findNode(with ID: Int) -> Node {
@@ -27,5 +27,20 @@ class NodesList: ObservableObject {
         }
         
         return emptyNode
+    }
+    
+    // MARK: Persistence
+    func saveEndings() {
+        let defaults = UserDefaults.standard
+        // Save to User Defaults for Key "userEndings"
+        defaults.set(self.completedEndings, forKey: "userEndings")
+    }
+    
+    static func loadEndings() -> [Int] {
+        let defaults = UserDefaults.standard
+        // Retrieve from User Defaults
+        let savedEndings = defaults.object(forKey: "userEndings") as? [Int] ?? []
+        // Return Retrieved Data
+        return savedEndings
     }
 }
