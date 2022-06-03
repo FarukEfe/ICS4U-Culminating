@@ -20,12 +20,12 @@ class NodesList: ObservableObject {
         self.completedEndings = []
     }
     
-    func findNode(with ID: Int) -> Node? {
+    func findNode(with ID: Int) -> Node {
         
         if let returning = self.gameNodes[ID] {
             return returning
         }
         
-        return nil
+        return emptyNode
     }
 }
