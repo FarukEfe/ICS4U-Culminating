@@ -9,32 +9,22 @@ import SwiftUI
 
 struct HistoryView: View {
     @Environment(\.dismiss) var dismiss
-    
     @Binding var activeNode: Int
     var completedEndings: [Int]
-    var totalNumberOfEndings = goodEndingIDs.count + badEndingIDs.count + ambiguousEndingIDs.count
     var body: some View {
         NavigationView {
             ScrollView {
-                Text("You have \(totalNumberOfEndings - completedEndings.count) endings left.")
-                    .multilineTextAlignment(.leading)
-                    .font(.title2)
-                
-                Text("Completed Endings:")
-                    .multilineTextAlignment(.leading)
-                    .font(.title2)
-
                 ForEach(completedEndings, id: \.self) { currentEnding in
-                        Text("\(currentEnding)")
-                            .padding()
-                            .font(.title2)
-                            .onTapGesture {
-                                activeNode = currentEnding
-                                dismiss()
-                            }
+                    Text("\(currentEnding)")
+                        .padding()
+                        .font(.title2)
+                        .onTapGesture {
+                            activeNode = currentEnding
+                            dismiss()
+                        }
                 }
             }
-            .navigationTitle("History")
+            .navigationTitle("\(completedEndings.count)/33:")
             .toolbar {
                 Button("Close") {
                     dismiss()

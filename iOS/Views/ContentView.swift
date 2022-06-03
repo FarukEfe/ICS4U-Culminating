@@ -46,11 +46,12 @@ struct ContentView: View {
                 
                 Spacer()
                 
+                if !nodesViewModel.completedEndings.isEmpty {
                 Button("History") {
                     showingSheet.toggle()
                 }
                 .buttonStyle(.bordered)
-                
+                }
             }
             .padding()
             .sheet(isPresented: $showingSheet) {
