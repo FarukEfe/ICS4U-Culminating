@@ -7,13 +7,17 @@
 
 import Foundation
 
-class NodesList {
+class NodesList: ObservableObject {
     
     // Where default game nodes are stored
     var gameNodes: [Int : Node]
         
+    // Keeps track of endings completed by user
+    @Published var completedEndings: [Int]
+    
     init() {
         self.gameNodes = storyNodes
+        self.completedEndings = []
     }
     
     func findNode(with ID: Int) -> Node? {

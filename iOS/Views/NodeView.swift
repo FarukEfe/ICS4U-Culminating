@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct NodeView: View {
+    // View Model to Access Ending Nodes
+    let nodesViewModel: NodesList
+    
+    // View Node
     let node: Node
+    
+    // Update Ending Node Index
     @Binding var activeNode: Int
-    @Binding var completedEndNodes: [Int]
     
     var nodeIsAnEnd: Bool {
         return node.edges == []
@@ -58,7 +63,7 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
-                        completedEndNodes.append(activeNode)
+                        nodesViewModel.completedEndings.append(activeNode)
                         activeNode = 0
                     }
             }
