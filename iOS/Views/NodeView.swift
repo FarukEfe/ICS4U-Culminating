@@ -65,6 +65,7 @@ struct NodeView: View {
                     .onTapGesture {
                         if !nodesViewModel.completedEndings.contains(activeNode) {
                             nodesViewModel.completedEndings.append(activeNode)
+                            nodesViewModel.saveEndings()
                         }
                         activeNode = 0
                     }
