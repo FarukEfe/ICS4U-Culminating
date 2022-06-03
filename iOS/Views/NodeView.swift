@@ -27,6 +27,9 @@ struct NodeView: View {
                 Text("\(node.id)")
                     .padding()
                     .font(Font.custom("Sunset Medium", size: 36.0))
+                    .onTapGesture {
+                        activeNode = 0
+                    }
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text("\t\(currentParagraph)")
                         .padding()
