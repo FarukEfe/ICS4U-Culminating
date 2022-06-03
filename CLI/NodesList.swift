@@ -26,6 +26,6 @@ class NodesList: ObservableObject {
             return returning
         }
         
-        return Node(id: 404, paragraphs: [], image: "", edges: [], ending: false)
+        return nil
     }
 }
