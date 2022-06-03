@@ -15,9 +15,13 @@ class NodesList: ObservableObject {
     // Keeps track of endings completed by user
     @Published var completedEndings: [Int]
     
+    // Shows active node index (EXPERIMENTAL)
+    @Published var activeNodeIndex: Int
+    
     init() {
         self.gameNodes = storyNodes
         self.completedEndings = NodesList.loadEndings()
+        self.activeNodeIndex = NodesList.loadActiveNodeIndex()
     }
     
     func findNode(with ID: Int) -> Node {
@@ -36,11 +40,33 @@ class NodesList: ObservableObject {
         defaults.set(self.completedEndings, forKey: "userEndings")
     }
     
+    func saveIndex() {
+        let defaults = UserDefaults.standard
+        // Save to User Defaults for Key "userIndex"
+        defaults.set(self.activeNodeIndex, forKey: "userIndex")
+    }
+    
     static func loadEndings() -> [Int] {
         let defaults = UserDefaults.standard
-        // Retrieve from User Defaults
+        // Retrieve Endings from User Defaults
         let savedEndings = defaults.object(forKey: "userEndings") as? [Int] ?? []
         // Return Retrieved Data
         return savedEndings
+    }
+    
+    static func loadActiveNodeIndex() -> Int {
+        let defaults = UserDefaults.standard
+        // Retrieve Index from User Defaults
+        let savedIndex = defaults.object(forKey: "userIndex") as? Int ?? 0
+        // Return Data
+        return savedIndex
+    }
+    
+    func resetActiveNodeIndex() {
+        let defaults = UserDefaults.standard
+        // Remove for key "userIndex"
+        defaults.removeObject(forKey: "userIndex")
+        // Set Active Node Index to 0
+        self.activeNodeIndex = 0
     }
 }
