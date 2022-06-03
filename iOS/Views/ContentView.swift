@@ -20,7 +20,7 @@ struct ContentView: View {
     }
     
     var currentNode: Node {
-        return nodesViewModel.gameNodes[activeNode] ?? emptyNode
+        return nodesViewModel.findNode(with: activeNode)
     }
     
     // MARK: View

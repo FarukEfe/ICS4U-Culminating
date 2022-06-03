@@ -63,7 +63,9 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
-                        nodesViewModel.completedEndings.append(activeNode)
+                        if !nodesViewModel.completedEndings.contains(activeNode) {
+                            nodesViewModel.completedEndings.append(activeNode)
+                        }
                         activeNode = 0
                     }
             }
