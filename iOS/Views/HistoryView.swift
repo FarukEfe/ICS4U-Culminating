@@ -10,21 +10,15 @@ import SwiftUI
 struct HistoryView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var activeNode: Int
-    var completedEndings: [Int]
+    let vm: NodesList
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(completedEndings, id: \.self) { currentEnding in
-                    Text("\(currentEnding)")
-                        .padding()
-                        .font(.title2)
-                        .onTapGesture {
-                            activeNode = currentEnding
-                            dismiss()
-                        }
+                ForEach(vm.completedEndings, id: \.self) { currentEnding in
+                    CardView(node: vm.findNode(with: currentEnding))
                 }
             }
-            .navigationTitle("\(completedEndings.count)/33:")
+            .navigationTitle("\(vm.completedEndings.count)/33 Endings:")
             .toolbar {
                 Button("Close") {
                     dismiss()
@@ -33,3 +27,5 @@ struct HistoryView: View {
         }
     }
 }
+
+

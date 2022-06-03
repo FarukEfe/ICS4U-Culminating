@@ -8,22 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    // MARK: Properties
-    @ObservedObject var nodesViewModel: NodesList
-    
+    @ObservedObject var vm: NodesList
     @State var activeNode = 0
     @State private var showingSheet = false
     
     var gameIsON: Bool {
         return activeNode > 0
     }
-    
     var currentNode: Node {
-        return nodesViewModel.findNode(with: activeNode)
+        return vm.findNode(with: activeNode)
     }
     
-    // MARK: View
     var body: some View {
         if gameIsON == false {
             VStack {
@@ -46,23 +41,21 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                if !nodesViewModel.completedEndings.isEmpty {
-                Button("History") {
-                    showingSheet.toggle()
-                }
-                .buttonStyle(.bordered)
+                if !vm.completedEndings.isEmpty {
+                    Button("History") {
+                        showingSheet.toggle()
+                    }
+                    .buttonStyle(.bordered)
                 }
             }
             .padding()
             .sheet(isPresented: $showingSheet) {
-                HistoryView(activeNode: $activeNode, completedEndings: nodesViewModel.completedEndings)
+                HistoryView(activeNode: $activeNode, vm: vm)
             }
         } else {
-            NodeView(nodesViewModel: nodesViewModel, node: currentNode, activeNode: $activeNode)
+            NodeView(vm: vm, node: currentNode, activeNode: $activeNode)
         }
     }
-    
-    // MARK: Functions
     func startGame() {
         activeNode = 1
     }
