@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HistoryView: View {
     @Environment(\.dismiss) var dismiss
+    
+    @Binding var activeNode: Int
     var completedEndings: [Int]
     var totalNumberOfEndings = goodEndingIDs.count + badEndingIDs.count + ambiguousEndingIDs.count
     var body: some View {
@@ -26,6 +28,10 @@ struct HistoryView: View {
                         Text("\(currentEnding)")
                             .padding()
                             .font(.title2)
+                            .onTapGesture {
+                                activeNode = currentEnding
+                                dismiss()
+                            }
                 }
             }
             .navigationTitle("History")

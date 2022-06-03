@@ -54,7 +54,7 @@ struct ContentView: View {
             }
             .padding()
             .sheet(isPresented: $showingSheet) {
-                HistoryView(completedEndings: nodesViewModel.completedEndings)
+                HistoryView(activeNode: $activeNode, completedEndings: nodesViewModel.completedEndings)
             }
         } else {
             NodeView(nodesViewModel: nodesViewModel, node: currentNode, activeNode: $activeNode)
