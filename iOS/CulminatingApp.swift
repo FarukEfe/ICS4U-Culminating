@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct CulminatingApp: App {
+    
+    @StateObject var nodesViewModel = NodesList()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(nodesViewModel: nodesViewModel)
         }
     }
 }

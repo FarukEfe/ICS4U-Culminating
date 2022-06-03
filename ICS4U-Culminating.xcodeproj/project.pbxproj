@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
 		497FCF3B28456B68007D8FBA /* EndingIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497FCF3A28456B68007D8FBA /* EndingIDs.swift */; };
+		497FCF3E284A3B60007D8FBA /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
 		921697BA2847B4600025C02A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921697B92847B4600025C02A /* HistoryView.swift */; };
 		92742D942846E72400CEAC3A /* Sunset-DemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */; };
 		92742D952846E72400CEAC3A /* Sunset-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */; };
@@ -318,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497FCF3E284A3B60007D8FBA /* NodesList.swift in Sources */,
 				921697BA2847B4600025C02A /* HistoryView.swift in Sources */,
 				92D9DD062846997700EBAEC1 /* Node.swift in Sources */,
 				92D9DD072846997700EBAEC1 /* Edge.swift in Sources */,
@@ -381,6 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -435,6 +438,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -448,7 +452,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,7 +464,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -476,7 +480,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -508,7 +512,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
