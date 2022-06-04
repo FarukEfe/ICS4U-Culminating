@@ -16,6 +16,10 @@ struct HistoryView: View {
             ScrollView {
                 ForEach(vm.completedEndings, id: \.self) { currentEnding in
                     CardView(node: vm.findNode(with: currentEnding))
+                        .padding(.horizontal)
+                        .onTapGesture {
+                            activeNode = currentEnding
+                        }
                 }
             }
             .navigationTitle("\(vm.completedEndings.count)/33 Endings:")
