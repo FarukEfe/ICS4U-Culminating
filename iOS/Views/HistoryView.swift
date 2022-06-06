@@ -23,6 +23,11 @@ struct HistoryView: View {
                 }
             }
             .navigationTitle("\(vm.completedEndings.count)/33 Endings:")
+            .background(
+                Image("Beige")
+                    .resizable()
+                    .ignoresSafeArea()
+            )
             .toolbar {
                 Button("Close") {
                     dismiss()

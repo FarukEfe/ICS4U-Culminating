@@ -22,7 +22,20 @@ struct ContentView: View {
     var body: some View {
         if gameIsON == false {
             VStack {
-                Spacer()
+                HStack {
+                    Spacer()
+                    if !vm.completedEndings.isEmpty {
+                        Button {
+                            showingSheet.toggle()
+                        } label: {
+                            Image(systemName: "clock.fill")
+                                .font(Font.title)
+                        }
+                        .foregroundColor(.black)
+                        .buttonStyle(.bordered)
+                    }
+                }
+                .padding(.vertical)
                 
                 Text("THE ABOMINABLE SNOWMAN")
                     .font(Font.custom("Benecarlo Book", size: 36))
@@ -42,14 +55,14 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                if !vm.completedEndings.isEmpty {
-                    Button("History") {
-                        showingSheet.toggle()
-                    }
-                    .buttonStyle(.bordered)
-                }
             }
             .padding()
+            .background(
+                Image("Beige")
+                    .resizable()
+                    .ignoresSafeArea()
+            )
+            
             .sheet(isPresented: $showingSheet) {
                 HistoryView(activeNode: $activeNode, vm: vm)
             }
