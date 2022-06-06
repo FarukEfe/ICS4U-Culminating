@@ -14,8 +14,8 @@ struct NodeView: View {
     // View Node
     let node: Node
     
-    // Update Ending Node Index
-    @Binding var activeNode: Int
+    // Binding value of gameIsOn
+    @Binding var gameIsOn: Bool
     
     var nodeIsAnEnd: Bool {
         return node.edges == []
@@ -28,7 +28,7 @@ struct NodeView: View {
                     .padding()
                     .font(Font.custom("Sunset Medium", size: 36.0))
                     .onTapGesture {
-                        activeNode = 0
+                        nodesViewModel.activeNodeIndex = 0
                     }
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text("\t\(currentParagraph)")
@@ -51,7 +51,7 @@ struct NodeView: View {
                             .font(Font.custom("Sunset Medium Italic", size: 20))
                             .multilineTextAlignment(.trailing)
                             .onTapGesture {
-                                activeNode = currentEdge.destinationId
+                                nodesViewModel.activeNodeIndex = currentEdge.destinationId
                             }
                     }
                 }
@@ -63,11 +63,13 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
-                        if !nodesViewModel.completedEndings.contains(activeNode) {
-                            nodesViewModel.completedEndings.append(activeNode)
+                        if !nodesViewModel.completedEndings.contains(nodesViewModel.activeNodeIndex) {
+                            nodesViewModel.completedEndings.append(nodesViewModel.activeNodeIndex)
                             nodesViewModel.saveEndings()
                         }
-                        activeNode = 0
+                        nodesViewModel.activeNodeIndex = 0
+                        nodesViewModel.resetActiveNodeIndex()
+                        
                     }
             }
         }.background(

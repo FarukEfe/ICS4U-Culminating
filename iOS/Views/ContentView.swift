@@ -11,21 +11,16 @@ struct ContentView: View {
     
     // MARK: Properties
     @ObservedObject var nodesViewModel: NodesList
-    
-    @State var activeNode = 0
     @State private var showingSheet = false
-    
-    var gameIsON: Bool {
-        return activeNode > 0
-    }
+    @State var gameIsOn = false
     
     var currentNode: Node {
-        return nodesViewModel.findNode(with: activeNode)
+        return nodesViewModel.findNode(with: nodesViewModel.activeNodeIndex)
     }
     
     // MARK: View
     var body: some View {
-        if gameIsON == false {
+        if gameIsOn == false {
             VStack {
                 Spacer()
                 
@@ -57,13 +52,14 @@ struct ContentView: View {
                 HistoryView(activeNode: $activeNode, completedEndings: nodesViewModel.completedEndings)
             }
         } else {
-            NodeView(nodesViewModel: nodesViewModel, node: currentNode, activeNode: $activeNode)
+            NodeView(nodesViewModel: nodesViewModel, node: currentNode, gameIsOn: $gameIsOn)
         }
     }
     
     // MARK: Functions
     func startGame() {
-        activeNode = 1
+        gameIsOn = true
+        nodesViewModel.activeNodeIndex = 1
     }
 }
 
