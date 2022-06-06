@@ -35,7 +35,9 @@ struct NodeView: View {
                     Image(node.image!)
                         .resizable()
                         .scaledToFit()
+                        .border(Color.black, width: 5)
                         .padding()
+
                 }
                 
                 ForEach(node.edges, id: \.self) { currentEdge in

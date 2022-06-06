@@ -31,6 +31,7 @@ struct ContentView: View {
                 Image("Cover")
                     .resizable()
                     .scaledToFit()
+                    .border(Color.black, width: 10)
                     .padding()
                     .onTapGesture {
                         startGame()
