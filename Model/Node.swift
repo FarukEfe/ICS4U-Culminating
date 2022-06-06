@@ -12,9 +12,7 @@ struct Node: Identifiable, Decodable {
     let paragraphs: [String]
     let image: String?
     let edges: [Edge]
-    let ending: Bool
-    let endingType: TypeOfEnding?
-    let endingDescription: String?
+    let ending: Ending?
 }
 
 let emptyNode = Node(id: 0, paragraphs: [], image: nil, edges: [], ending: false, endingType: nil, endingDescription: nil)

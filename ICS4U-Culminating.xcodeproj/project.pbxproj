@@ -22,6 +22,7 @@
 		92742D9F2846E72D00CEAC3A /* Benecarlo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */; };
 		9280237B284A63720084160F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237A284A63720084160F /* CardView.swift */; };
 		9280237D284A65C50084160F /* TypeOfEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237C284A65C50084160F /* TypeOfEnding.swift */; };
+		929C8DF4284E612C00178DAD /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C8DF3284E612C00178DAD /* Ending.swift */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
@@ -62,6 +63,7 @@
 		92742DA02846E7AB00CEAC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9280237A284A63720084160F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		9280237C284A65C50084160F /* TypeOfEnding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfEnding.swift; sourceTree = "<group>"; };
+		929C8DF3284E612C00178DAD /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
 		92BB5A05283E6AF0002A7C2A /* CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				92BB5A15283E7730002A7C2A /* Node.swift */,
 				92D9DCDF284691E900EBAEC1 /* Edge.swift */,
 				9280237C284A65C50084160F /* TypeOfEnding.swift */,
+				929C8DF3284E612C00178DAD /* Ending.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
 				4912EC572840565D00B823B6 /* NodesList.swift in Sources */,
+				929C8DF4284E612C00178DAD /* Ending.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
