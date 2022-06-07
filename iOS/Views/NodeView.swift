@@ -17,6 +17,9 @@ struct NodeView: View {
     // Binding value of gameIsOn
     @Binding var gameIsOn: Bool
     
+    // View Active Node Index
+    @Binding var activeNode: Int
+    
     var nodeIsAnEnd: Bool {
         return node.edges == []
     }
@@ -28,7 +31,10 @@ struct NodeView: View {
                     .padding()
                     .font(Font.custom("Sunset Medium", size: 36.0))
                     .onTapGesture {
+                        gameIsOn = false
+                        activeNode = 0
                         nodesViewModel.activeNodeIndex = 0
+                        nodesViewModel.resetActiveNodeIndex()
                     }
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text("\t\(currentParagraph)")
@@ -51,7 +57,10 @@ struct NodeView: View {
                             .font(Font.custom("Sunset Medium Italic", size: 20))
                             .multilineTextAlignment(.trailing)
                             .onTapGesture {
-                                nodesViewModel.activeNodeIndex = currentEdge.destinationId
+                                activeNode = currentEdge.destinationId
+                                nodesViewModel.activeNodeIndex = activeNode
+                                nodesViewModel.saveIndex()
+                                
                             }
                     }
                 }
@@ -63,12 +72,14 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
-                        if !nodesViewModel.completedEndings.contains(nodesViewModel.activeNodeIndex) {
+                        if !nodesViewModel.completedEndings.contains(nodesViewModel.activeNodeIndex) && gameIsOn {
                             nodesViewModel.completedEndings.append(nodesViewModel.activeNodeIndex)
                             nodesViewModel.saveEndings()
                         }
+                        gameIsOn = false
                         nodesViewModel.activeNodeIndex = 0
                         nodesViewModel.resetActiveNodeIndex()
+                        activeNode = 0
                         
                     }
             }
