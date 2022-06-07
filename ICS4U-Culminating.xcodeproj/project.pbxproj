@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4912EC572840565D00B823B6 /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
 		497FCF3E284A3B60007D8FBA /* NodesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4912EC562840565D00B823B6 /* NodesList.swift */; };
+		49A29295284FCD3D00D68968 /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237C284A65C50084160F /* Ending.swift */; };
 		921697BA2847B4600025C02A /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921697B92847B4600025C02A /* HistoryView.swift */; };
 		92742D942846E72400CEAC3A /* Sunset-DemiItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */; };
 		92742D952846E72400CEAC3A /* Sunset-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
+		49A29294284FCC5300D68968 /* output.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = output.pdf; sourceTree = "<group>"; };
 		921697B92847B4600025C02A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-DemiItalic.otf"; sourceTree = "<group>"; };
 		92742D8D2846E72400CEAC3A /* Sunset-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-BoldItalic.otf"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				92BB5A14283E772A002A7C2A /* input.txt */,
+				49A29294284FCC5300D68968 /* output.pdf */,
 				92BB5A17283ED5D9002A7C2A /* graph.svg */,
 			);
 			path = Graph;
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A29295284FCD3D00D68968 /* Ending.swift in Sources */,
 				92BB5A09283E6AF0002A7C2A /* main.swift in Sources */,
 				92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
@@ -454,7 +458,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,7 +470,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -482,7 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -514,7 +518,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = GR6SL6LH76;
+				DEVELOPMENT_TEAM = 6WTD6KAA94;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
