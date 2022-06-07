@@ -11,16 +11,20 @@ struct ContentView: View {
     @ObservedObject var vm: NodesList
     @State var activeNode = 0
     @State private var showingSheet = false
-    
-    var gameIsON: Bool {
-        return activeNode > 0
-    }
+    @State var gameIsOn = false
+
     var currentNode: Node {
         return vm.findNode(with: activeNode)
     }
     
+    // MARK: Initializer
+    init (nodesViewModel: NodesList) {
+        self.nodesViewModel = nodesViewModel
+    }
+    
+    // MARK: View
     var body: some View {
-        if gameIsON == false {
+        if gameIsOn == false && activeNode == 0 {
             VStack {
                 HStack {
                     Spacer()
@@ -67,11 +71,20 @@ struct ContentView: View {
                 HistoryView(activeNode: $activeNode, vm: vm)
             }
         } else {
-            NodeView(vm: vm, node: currentNode, activeNode: $activeNode)
+
+            NodeView(vm: vm, node: currentNode, gameIsOn: $gameIsOn, activeNode: $activeNode)
         }
     }
     func startGame() {
-        activeNode = 1
+        if nodesViewModel.activeNodeIndex > 0 {
+            self.activeNode = nodesViewModel.activeNodeIndex
+            print("Game data retrieved, active node is \(self.activeNode)")
+        } else {
+            self.activeNode = 1
+            nodesViewModel.activeNodeIndex = activeNode
+        }
+        nodesViewModel.saveIndex()
+        gameIsOn = true
     }
 }
 
