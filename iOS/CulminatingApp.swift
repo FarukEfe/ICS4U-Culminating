@@ -9,36 +9,21 @@ import SwiftUI
 
 @main
 struct CulminatingApp: App {
-    
-    // Detect movements between foreground and background
     @Environment(\.scenePhase) var scenePhase
-    
-    // View Model
-    @StateObject var nodesViewModel = NodesList()
-    
+    @StateObject var vm = NodesList()
     var body: some Scene {
         WindowGroup {
-            ContentView(nodesViewModel: nodesViewModel)
+            ContentView(vm: vm)
         }
         .onChange(of: scenePhase) { newPhase in
-            
             if newPhase == .inactive {
-                
                 print("Inactive")
-                
             } else if newPhase == .active {
-                
                 print("Active")
-                
             } else if newPhase == .background {
-                
                 print("Background")
-                
-                nodesViewModel.saveEndings()
-                
-                
+                vm.saveEndings()
             }
-            
         }
     }
 }

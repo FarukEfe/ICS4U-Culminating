@@ -9,32 +9,25 @@ import SwiftUI
 
 struct HistoryView: View {
     @Environment(\.dismiss) var dismiss
-    
     @Binding var activeNode: Int
-    var completedEndings: [Int]
-    var totalNumberOfEndings = goodEndingIDs.count + badEndingIDs.count + ambiguousEndingIDs.count
+    let vm: NodesList
     var body: some View {
         NavigationView {
             ScrollView {
-                Text("You have \(totalNumberOfEndings - completedEndings.count) endings left.")
-                    .multilineTextAlignment(.leading)
-                    .font(.title2)
-                
-                Text("Completed Endings:")
-                    .multilineTextAlignment(.leading)
-                    .font(.title2)
-
-                ForEach(completedEndings, id: \.self) { currentEnding in
-                        Text("\(currentEnding)")
-                            .padding()
-                            .font(.title2)
-                            .onTapGesture {
-                                activeNode = currentEnding
-                                dismiss()
-                            }
+                ForEach(vm.completedEndings, id: \.self) { currentEnding in
+                    CardView(node: vm.findNode(with: currentEnding))
+                        .padding(.horizontal)
+                        .onTapGesture {
+                            activeNode = currentEnding
+                        }
                 }
             }
-            .navigationTitle("History")
+            .navigationTitle("\(vm.completedEndings.count)/33 Endings:")
+            .background(
+                Image("Beige")
+                    .resizable()
+                    .ignoresSafeArea()
+            )
             .toolbar {
                 Button("Close") {
                     dismiss()
@@ -43,3 +36,5 @@ struct HistoryView: View {
         }
     }
 }
+
+

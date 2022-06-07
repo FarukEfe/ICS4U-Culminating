@@ -8,12 +8,8 @@
 import SwiftUI
 
 struct NodeView: View {
-    // View Model to Access Ending Nodes
-    let nodesViewModel: NodesList
-    
-    // View Node
+    let vm: NodesList
     let node: Node
-    
     // Binding value of gameIsOn
     @Binding var gameIsOn: Bool
     
@@ -46,7 +42,9 @@ struct NodeView: View {
                     Image(node.image!)
                         .resizable()
                         .scaledToFit()
+                        .border(Color.black, width: 5)
                         .padding()
+
                 }
                 
                 ForEach(node.edges, id: \.self) { currentEdge in
@@ -72,15 +70,14 @@ struct NodeView: View {
                     .font(Font.custom("Sunset Bold", size: 25))
                     .multilineTextAlignment(.center)
                     .onTapGesture {
-                        if !nodesViewModel.completedEndings.contains(nodesViewModel.activeNodeIndex) && gameIsOn {
-                            nodesViewModel.completedEndings.append(nodesViewModel.activeNodeIndex)
-                            nodesViewModel.saveEndings()
+                        if !vm.completedEndings.contains(vm.activeNodeIndex) && gameIsOn {
+                            vm.completedEndings.append(vm.activeNodeIndex)
+                            vm.saveEndings()
                         }
                         gameIsOn = false
                         nodesViewModel.activeNodeIndex = 0
                         nodesViewModel.resetActiveNodeIndex()
                         activeNode = 0
-                        
                     }
             }
         }.background(

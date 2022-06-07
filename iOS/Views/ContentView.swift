@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    
-    // MARK: Properties
-    @ObservedObject var nodesViewModel: NodesList
-    
+    @ObservedObject var vm: NodesList
     @State var activeNode = 0
     @State private var showingSheet = false
     @State var gameIsOn = false
-    
+
     var currentNode: Node {
-        return nodesViewModel.findNode(with: activeNode)
+        return vm.findNode(with: activeNode)
     }
     
     // MARK: Initializer
@@ -29,7 +26,20 @@ struct ContentView: View {
     var body: some View {
         if gameIsOn == false && activeNode == 0 {
             VStack {
-                Spacer()
+                HStack {
+                    Spacer()
+                    if !vm.completedEndings.isEmpty {
+                        Button {
+                            showingSheet.toggle()
+                        } label: {
+                            Image(systemName: "clock.fill")
+                                .font(Font.title)
+                        }
+                        .foregroundColor(.black)
+                        .buttonStyle(.bordered)
+                    }
+                }
+                .padding(.vertical)
                 
                 Text("THE ABOMINABLE SNOWMAN")
                     .font(Font.custom("Benecarlo Book", size: 36))
@@ -38,6 +48,7 @@ struct ContentView: View {
                 Image("Cover")
                     .resizable()
                     .scaledToFit()
+                    .border(Color.black, width: 10)
                     .padding()
                     .onTapGesture {
                         startGame()
@@ -48,22 +59,22 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Button("History") {
-                    showingSheet.toggle()
-                }
-                .buttonStyle(.bordered)
-                
             }
             .padding()
+            .background(
+                Image("Beige")
+                    .resizable()
+                    .ignoresSafeArea()
+            )
+            
             .sheet(isPresented: $showingSheet) {
-                HistoryView(activeNode: $activeNode, completedEndings: nodesViewModel.completedEndings)
+                HistoryView(activeNode: $activeNode, vm: vm)
             }
         } else {
-            NodeView(nodesViewModel: nodesViewModel, node: currentNode, gameIsOn: $gameIsOn, activeNode: $activeNode)
+
+            NodeView(vm: vm, node: currentNode, gameIsOn: $gameIsOn, activeNode: $activeNode)
         }
     }
-    
-    // MARK: Functions
     func startGame() {
         if nodesViewModel.activeNodeIndex > 0 {
             self.activeNode = nodesViewModel.activeNodeIndex
