@@ -17,9 +17,10 @@ var previousEndings: [Node] = []
 var screenMode: String = "MAIN MENU"
 
 // MARK: Command Line App Cycles
+
 // Main Screen
 func mainScreenCycle() {
-    print("\nMAIN MENU\n\n0 - Quit\n1 - Start\n2 - Game History\n3 - Settings\n")
+    print("\nMAIN MENU\n\n0 - Quit\n1 - Start\n2 - Game History\n")
     let mainInput = readLine()
     
     if mainInput == "0" {
@@ -30,8 +31,6 @@ func mainScreenCycle() {
         screenMode = "GAME ON"
     } else if mainInput == "2" {
         screenMode = "GAME HISTORY"
-    } else if mainInput == "3" {
-        screenMode = "SETTINGS"
     } else {
         print("Please enter a valid input (either 0,1,2, or 3)")
     }
@@ -55,7 +54,7 @@ func gameOnCycle() {
         // Evaluating User Destination Input
         var shouldReappear = true
         // If it is the end, then provide 3 options
-        if node!.ending {
+        if node!.ending != nil {
             previousEndings.append(node!)
             while shouldReappear {
                 shouldReappear = false
@@ -132,7 +131,7 @@ func gameHistoryCycle() {
             print(ending.id)
         }
         
-        print("\nThere remains still \(31-previousEndings.count) endings to be discovered.\n")
+        print("\n\(previousEndings.count) out of 33 endings discovered.\n")
         print("0 for main menu or type in the index number of the ending you want to revisit: ")
         
         let userResponse = readLine()?.replacingOccurrences(of: " ", with: "")
@@ -162,11 +161,6 @@ func gameHistoryCycle() {
     }
 }
 
-// Settings
-func settingsCycle() {
-    
-}
-
 print("\nWelcome to the game!")
 while true {
     switch screenMode {
@@ -176,9 +170,6 @@ while true {
             gameOnCycle()
         case "GAME HISTORY":
             gameHistoryCycle()
-        case "SETTINGS":
-            //settingsCycle()
-            exit(0)
         default:
             print("Invalid screen mode, terminating the game")
             exit(0)
