@@ -18,8 +18,8 @@ struct ContentView: View {
     }
     
     // MARK: Initializer
-    init (nodesViewModel: NodesList) {
-        self.nodesViewModel = nodesViewModel
+    init (vm: NodesList) {
+        self.vm = vm
     }
     
     // MARK: View
@@ -76,14 +76,14 @@ struct ContentView: View {
         }
     }
     func startGame() {
-        if nodesViewModel.activeNodeIndex > 0 {
-            self.activeNode = nodesViewModel.activeNodeIndex
+        if vm.activeNodeIndex > 0 {
+            self.activeNode = vm.activeNodeIndex
             print("Game data retrieved, active node is \(self.activeNode)")
         } else {
             self.activeNode = 1
-            nodesViewModel.activeNodeIndex = activeNode
+            vm.activeNodeIndex = activeNode
         }
-        nodesViewModel.saveIndex()
+        vm.saveIndex()
         gameIsOn = true
     }
 }

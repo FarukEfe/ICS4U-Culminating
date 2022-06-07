@@ -12,8 +12,8 @@ struct CardView: View {
     var body: some View {
         HStack {
             HStack{
-                Text(node.endingType == .good ? "🙂" : node.endingType == .bad ? "☹️" : "😐")
-                Text("\(node.endingDescription!)")
+                Text(node.ending?.classification == .good ? "🙂" : node.ending?.classification == .bad ? "☹️" : "😐")
+                Text(node.ending!.description)
                     .fontWeight(.bold)
             }
             .font(.title)
@@ -22,7 +22,7 @@ struct CardView: View {
         }
         .frame(maxWidth: .infinity)
         .foregroundColor(.white)
-        .background(node.endingType == .good ? Color.green : node.endingType == .bad ? Color.red : Color.blue)
+        .background(node.ending?.classification == .good ? Color.green : node.ending?.classification == .bad ? Color.red : Color.blue)
         .cornerRadius(12)
     }
 }

@@ -21,8 +21,7 @@
 		92742D9E2846E72D00CEAC3A /* Benecarlo-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D9C2846E72D00CEAC3A /* Benecarlo-Book.otf */; };
 		92742D9F2846E72D00CEAC3A /* Benecarlo-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */; };
 		9280237B284A63720084160F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237A284A63720084160F /* CardView.swift */; };
-		9280237D284A65C50084160F /* TypeOfEnding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237C284A65C50084160F /* TypeOfEnding.swift */; };
-		929C8DF4284E612C00178DAD /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C8DF3284E612C00178DAD /* Ending.swift */; };
+		9280237D284A65C50084160F /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9280237C284A65C50084160F /* Ending.swift */; };
 		92BB5A09283E6AF0002A7C2A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A08283E6AF0002A7C2A /* main.swift */; };
 		92BB5A16283E7730002A7C2A /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB5A15283E7730002A7C2A /* Node.swift */; };
 		92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D9DCDF284691E900EBAEC1 /* Edge.swift */; };
@@ -62,8 +61,7 @@
 		92742D9D2846E72D00CEAC3A /* Benecarlo-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Benecarlo-Medium.otf"; sourceTree = "<group>"; };
 		92742DA02846E7AB00CEAC3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9280237A284A63720084160F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		9280237C284A65C50084160F /* TypeOfEnding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfEnding.swift; sourceTree = "<group>"; };
-		929C8DF3284E612C00178DAD /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
+		9280237C284A65C50084160F /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
 		92BB5A05283E6AF0002A7C2A /* CLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BB5A08283E6AF0002A7C2A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		92BB5A14283E772A002A7C2A /* input.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = input.txt; sourceTree = "<group>"; };
@@ -166,8 +164,7 @@
 			children = (
 				92BB5A15283E7730002A7C2A /* Node.swift */,
 				92D9DCDF284691E900EBAEC1 /* Edge.swift */,
-				9280237C284A65C50084160F /* TypeOfEnding.swift */,
-				929C8DF3284E612C00178DAD /* Ending.swift */,
+				9280237C284A65C50084160F /* Ending.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,7 +313,6 @@
 				92D9DCE0284691E900EBAEC1 /* Edge.swift in Sources */,
 				92BB5A16283E7730002A7C2A /* Node.swift in Sources */,
 				4912EC572840565D00B823B6 /* NodesList.swift in Sources */,
-				929C8DF4284E612C00178DAD /* Ending.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +323,7 @@
 				497FCF3E284A3B60007D8FBA /* NodesList.swift in Sources */,
 				9280237B284A63720084160F /* CardView.swift in Sources */,
 				921697BA2847B4600025C02A /* HistoryView.swift in Sources */,
-				9280237D284A65C50084160F /* TypeOfEnding.swift in Sources */,
+				9280237D284A65C50084160F /* Ending.swift in Sources */,
 				92D9DD062846997700EBAEC1 /* Node.swift in Sources */,
 				92D9DD072846997700EBAEC1 /* Edge.swift in Sources */,
 				92D9DD0C28469A1000EBAEC1 /* NodeView.swift in Sources */,
@@ -458,7 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -470,7 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_HARDENED_RUNTIME = YES;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -486,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
@@ -518,7 +514,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = 6WTD6KAA94;
+				DEVELOPMENT_TEAM = GR6SL6LH76;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOS/Info.plist;

@@ -29,8 +29,8 @@ struct NodeView: View {
                     .onTapGesture {
                         gameIsOn = false
                         activeNode = 0
-                        nodesViewModel.activeNodeIndex = 0
-                        nodesViewModel.resetActiveNodeIndex()
+                        vm.activeNodeIndex = 0
+                        vm.resetActiveNodeIndex()
                     }
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text("\t\(currentParagraph)")
@@ -56,8 +56,8 @@ struct NodeView: View {
                             .multilineTextAlignment(.trailing)
                             .onTapGesture {
                                 activeNode = currentEdge.destinationId
-                                nodesViewModel.activeNodeIndex = activeNode
-                                nodesViewModel.saveIndex()
+                                vm.activeNodeIndex = activeNode
+                                vm.saveIndex()
                                 
                             }
                     }
@@ -75,8 +75,8 @@ struct NodeView: View {
                             vm.saveEndings()
                         }
                         gameIsOn = false
-                        nodesViewModel.activeNodeIndex = 0
-                        nodesViewModel.resetActiveNodeIndex()
+                        vm.activeNodeIndex = 0
+                        vm.resetActiveNodeIndex()
                         activeNode = 0
                     }
             }
