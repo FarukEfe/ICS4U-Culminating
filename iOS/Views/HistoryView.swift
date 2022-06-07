@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct HistoryView: View {
+    
+    // Dismiss view when toggled
     @Environment(\.dismiss) var dismiss
+    
+    // Binds to active node on ContentView.swift
     @Binding var activeNode: Int
+    
+    // View Model
     let vm: NodesList
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -29,8 +36,17 @@ struct HistoryView: View {
                     .ignoresSafeArea()
             )
             .toolbar {
-                Button("Close") {
-                    dismiss()
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("Close") {
+                        dismiss()
+                    }
+                }
+                
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Erase Endings") {
+                        vm.resetUserEndings()
+                        dismiss()
+                    }
                 }
             }
         }
