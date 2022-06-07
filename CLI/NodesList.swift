@@ -33,17 +33,11 @@ class NodesList: ObservableObject {
         return emptyNode
     }
     
-    // MARK: Persistence
+    // MARK: Persistence - User Endings
     func saveEndings() {
         let defaults = UserDefaults.standard
         // Save to User Defaults for Key "userEndings"
         defaults.set(self.completedEndings, forKey: "userEndings")
-    }
-    
-    func saveIndex() {
-        let defaults = UserDefaults.standard
-        // Save to User Defaults for Key "userIndex"
-        defaults.set(self.activeNodeIndex, forKey: "userIndex")
     }
     
     static func loadEndings() -> [Int] {
@@ -54,6 +48,22 @@ class NodesList: ObservableObject {
         return savedEndings
     }
     
+    func resetUserEndings() {
+        let defaults = UserDefaults.standard
+        // Remove for key "userEndings"
+        defaults.removeObject(forKey: "userEndings")
+        // Set Active Node Index to 0
+        self.completedEndings = []
+    }
+    
+    // MARK: Persistence - Story Node Index
+    
+    func saveIndex() {
+        let defaults = UserDefaults.standard
+        // Save to User Defaults for Key "userIndex"
+        defaults.set(self.activeNodeIndex, forKey: "userIndex")
+    }
+
     static func loadActiveNodeIndex() -> Int {
         let defaults = UserDefaults.standard
         // Retrieve Index from User Defaults
