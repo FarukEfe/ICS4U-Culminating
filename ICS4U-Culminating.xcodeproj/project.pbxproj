@@ -49,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		4912EC562840565D00B823B6 /* NodesList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodesList.swift; sourceTree = "<group>"; };
+		493D2D282853B3080011D33D /* GraphGenerator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GraphGenerator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		49A29294284FCC5300D68968 /* output.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = output.pdf; sourceTree = "<group>"; };
 		921697B92847B4600025C02A /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		92742D8C2846E72400CEAC3A /* Sunset-DemiItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sunset-DemiItalic.otf"; sourceTree = "<group>"; };
@@ -155,6 +156,7 @@
 		92BB5A0F283E6D90002A7C2A /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				493D2D282853B3080011D33D /* GraphGenerator.playground */,
 				92BB5A14283E772A002A7C2A /* input.txt */,
 				49A29294284FCC5300D68968 /* output.pdf */,
 				92BB5A17283ED5D9002A7C2A /* graph.svg */,
