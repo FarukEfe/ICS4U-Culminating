@@ -34,7 +34,8 @@ struct NodeView: View {
                     }
                 ForEach(node.paragraphs, id: \.self) { currentParagraph in
                     Text("\t\(currentParagraph)")
-                        .padding()
+                        .padding(.horizontal)
+                        .padding(.bottom)
                         .font(Font.custom("Sunset Light", size: 20))
                 }
                 

@@ -21,6 +21,12 @@ struct HistoryView: View {
     var body: some View {
         NavigationView {
             ScrollView {
+                HStack{
+                    Text("You've completed \(vm.completedEndings.count)/33 endings.")
+                        .font(.title2)
+                    Spacer()
+                }
+                .padding(.horizontal)
                 ForEach(vm.completedEndings, id: \.self) { currentEnding in
                     CardView(node: vm.findNode(with: currentEnding))
                         .padding(.horizontal)
@@ -29,7 +35,7 @@ struct HistoryView: View {
                         }
                 }
             }
-            .navigationTitle("\(vm.completedEndings.count)/33 Endings:")
+            .navigationTitle("History")
             .background(
                 Image("Beige")
                     .resizable()
